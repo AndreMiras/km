@@ -88,6 +88,11 @@ You may also want to decode from a Wireshark dump (LLRP body only).
     print decode_message (read_file("dump.raw"))->toString(1)
     '
 
+Last but not least, use [llrp_dump_decoder.pl](https://raw.github.com/AndreMiras/km/master/attachments/llrp_dump_decoder.pl) if you need to decode multiple messages of a raw Wireshark dump.
+
+    ./llrp_dump_decoder.pl wireshark_dump.raw
+
+
 ## Install instructions
 ### Download
 At the time of writing the latest version is [LTKPerl-1.0.0.5](http://sourceforge.net/projects/llrp-toolkit/files/llrp-toolkit/ltkperl/1.0.0.5/).
