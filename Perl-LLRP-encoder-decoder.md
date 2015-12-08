@@ -82,6 +82,12 @@ That will output the following:
       </llrp:ROSpec>
     </llrp:ADD_ROSPEC>
 
+You may also want to decode from a Wireshark dump (LLRP body only).
+
+    perl -MRFID::LLRP::Builder=decode_message -MFile::Slurp -e '
+    print decode_message (read_file("dump.raw"))->toString(1)
+    '
+
 ## Install instructions
 ### Download
 At the time of writing the latest version is [LTKPerl-1.0.0.5](http://sourceforge.net/projects/llrp-toolkit/files/llrp-toolkit/ltkperl/1.0.0.5/).
