@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# This file must be executable to work! chmod 755!
+# This file must be executable to work.
+# chmod +x /etc/auto.smb2
 
 key="$1"
-opts="-fstype=cifs,iocharset=utf8,file_mode=0777,dir_mode=0777,uid=andre,gid=andre"
+opts="-fstype=cifs,iocharset=utf8,file_mode=0777,dir_mode=0777"
 cred="/etc/auto.smb2.$key"
 
 for P in /bin /sbin /usr/bin /usr/sbin
