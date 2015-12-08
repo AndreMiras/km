@@ -11,7 +11,11 @@ Before copying these files to /etc/ you will require to install autofs.
 
     sudo apt-get install autofs
 
-You would also have to update the credential file with your user/password.
+You would also have to update the credential file with your user/password and optional domain. The file must sit in /etc/auto.smb2.$key, with $key being the server you want to access to and should contain the following lines:
+
+    domain=your_optional_domain
+    username=your_username
+    password=your_password
 
 ## Attachments
 
@@ -26,7 +30,7 @@ You need to be able to resolve the server name, the cifs-utils package may be us
 
 The auto.smb2 file must have the execute mode.
 
-    sudo chmod +x /etc/auto.smb2.
+    sudo chmod +x /etc/auto.smb2
 
 Debug issues by stopping autofs (sudo service autofs stop) and running automount.
 
