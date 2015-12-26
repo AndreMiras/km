@@ -7,7 +7,7 @@ Here's a custom configuration example for autodiscovering and automounting serve
 * the auto.master file is the landing template pointing to one or more other templates for specific media types
 * the auto.smb2 is the custom Samba configuration, it draws it inspiration from the auto.smb provided by Ubuntu, but adds support for user/password thanks to an external credential file
 
-Before copying these files to /etc/ you will require to install autofs.
+Install autofs then copy these files to /etc/.
 
     sudo apt-get install autofs
 
