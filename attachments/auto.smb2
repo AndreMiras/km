@@ -7,16 +7,14 @@ key="$1"
 opts="-fstype=cifs,iocharset=utf8,file_mode=0777,dir_mode=0777"
 cred="/etc/auto.smb2.$key"
 
-for P in /bin /sbin /usr/bin /usr/sbin
-do
-        if [ -x $P/smbclient ]
-        then
-                SMBCLIENT=$P/smbclient
-                break
-        fi
-done
+command_exists () {
+    type "$1" &> /dev/null;
+}
 
-[ -x $SMBCLIENT ] || exit 1
+if ! command_exists smbclient
+then
+    exit 1
+fi
 
 if [ -e "$cred" ]
 then
@@ -26,7 +24,7 @@ else
         smbopts="-N"
 fi
 
-$SMBCLIENT $smbopts -gL $key 2>/dev/null| awk -v key="$key" -v opts="$opts" -F'|' -- '
+smbclient $smbopts -gL $key 2>/dev/null| awk -v key="$key" -v opts="$opts" -F'|' -- '
         BEGIN   { ORS=""; first=1 }
         /Disk/  { 
                   if (first)
