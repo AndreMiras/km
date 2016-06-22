@@ -36,4 +36,10 @@ Debug issues by stopping autofs (sudo service autofs stop) and running automount
 
     sudo automount --verbose --debug --foreground /etc/auto.master
 
-Make sure smbclient is installed (sudo apt-get install smbclient).
+Run the /etc/auto.smb2 script directly, passing the server name you want to access.
+
+    sudo /etc/auto.smb2 servername
+
+Make sure smbclient is installed.
+
+    sudo apt-get install smbclient
