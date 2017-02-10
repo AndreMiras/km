@@ -1,6 +1,6 @@
 # Heroku standalone binary
 
-This is how to install the Heroku standalone client without a root access on Ubuntu.
+This is how to install the Heroku standalone client without a root access.
 
 ## TL;DR
 Simply (adapt and) run the three command lines below.
