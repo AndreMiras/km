@@ -4,17 +4,25 @@ This is quick'n dirty guide for installing LineageOS Android Distribution on the
 
 ## Prerequisite:
 
-* Windows Laptop or VM :'(
+ * Windows Laptop or VM :'(
  * Developer mode enabled on device
  * Device downgraded to Lollipop (Android 5.x)
  * Lot of patience
+
+## Useful links
+
+* [GApp](http://opengapps.org/)
+* [Samsung Lollipop firmware](https://www.sammobile.com/firmwares/)
+* [Odin3](http://dl.sammobile.com/Odin3-v3.12.7.zip) (v3.12.7)
+* [TWRP](https://www.androidfilehost.com/?w=files&flid=56315) (3.0.2.0-20161005-j5nltexx)
+* [Kies] (http://www.samsung.com/in/support/usefulsoftware/KIES/)
 
 ## Required files
 
  * lineage-14.1-20170706-UNOFFICIAL-j5ltexx.zip: LineageOS for the SM-J500FN
  * Odin3-v3.12.7.zip: Custom (leaked) internet software used by Samsung
  * J500FNXXU1APE3_J500FNOXX1APE1_XEF.zip: Lollipop firmware for the SM-J500FN
- * Kies3Setup.exe: Samsung software that could also be used for downgrading to Lollipop
+ * Kies3Setup.exe: Samsung software might also be used for downgrading to Lollipop
  * open_gapps-arm-7.1-nano-20170715.zip: Google App (Nano version) for Android 7
  * twrp-3.0.2.0-20161005-j5nltexx.tar.md5: Custom recovery image for Android
 
@@ -45,3 +53,6 @@ Then:
 ```
 adb push <file> <sdcard>
 ```
+
+### Windows laptop?!
+Well, I know, I'm sorry, or you could try to give [Heimdall](http://glassechidna.com.au/heimdall/) a try and create a pull request on the install instructions.
