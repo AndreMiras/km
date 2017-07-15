@@ -15,7 +15,7 @@ This is quick'n dirty guide for installing LineageOS Android Distribution on the
 * [Samsung Lollipop firmware](https://www.sammobile.com/firmwares/)
 * [Odin3](http://dl.sammobile.com/Odin3-v3.12.7.zip) (v3.12.7)
 * [TWRP](https://www.androidfilehost.com/?w=files&flid=56315) (3.0.2.0-20161005-j5nltexx)
-* [Kies] (http://www.samsung.com/in/support/usefulsoftware/KIES/)
+* [Kies](http://www.samsung.com/in/support/usefulsoftware/KIES/)
 
 ## Required files
 
