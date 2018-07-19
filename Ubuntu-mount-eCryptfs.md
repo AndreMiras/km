@@ -5,7 +5,7 @@
     sudo ecryptfs-unwrap-passphrase /media/<disk>/home/.ecryptfs/<user>/.ecryptfs/wrapped-passphrase
     aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-    ecryptfs-add-passphrase --fnek
+    sudo ecryptfs-add-passphrase --fnek
     Passphrase: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     Inserted auth tok with sig [bbbbbbbbbbbbbbbb] into the user session keyring
     Inserted auth tok with sig [cccccccccccccccc] into the user session keyring
