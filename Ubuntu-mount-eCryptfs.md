@@ -1,5 +1,7 @@
 # Mounting eCryptfs on Ubuntu
 
+## Notes
+
     sudo ecryptfs-unwrap-passphrase /media/<disk>/home/.ecryptfs/<user>/.ecryptfs/wrapped-passphrase
     aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
@@ -33,6 +35,16 @@
       ecryptfs_cipher=aes
       ecryptfs_sig=bbbbbbbbbbbbbbbb
     Mounted eCryptfs
+
+## Scripting it
+If you don't want to use the interactive mount and already know the mount parameters, you can try the following:
+```sh
+ecryptfs_sig=bbbbbbbbbbbbbbbb
+ecryptfs_fnek_sig=cccccccccccccccc
+PRIVATE_PATH="/media/<disk>/home/.ecryptfs/<user>/.Private/"
+MOUNT_POINT="/mnt/"
+sudo mount -i -t ecryptfs -o ecryptfs_cipher=aes,ecryptfs_key_bytes=16,ecryptfs_sig=$ecryptfs_sig,ecryptfs_fnek_sig=$ecryptfs_fnek_sig $PRIVATE_PATH $MOUNT_POINT
+```
 
 ## Troubleshooting
 Bear in mind the keyring get cached, you can list and delete them using `keyctl` command:
