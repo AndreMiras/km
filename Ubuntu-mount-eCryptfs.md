@@ -33,3 +33,11 @@
       ecryptfs_cipher=aes
       ecryptfs_sig=bbbbbbbbbbbbbbbb
     Mounted eCryptfs
+
+## Troubleshooting
+Bear in mind the keyring get cached, you can list and delete them using `keyctl` command:
+```sh
+keyctl list @u
+keyctl clear @u
+```
+Another thing is it actually get cached per user. So running `ecryptfs-add-passphrase` without `sudo` would cache it to your user rather than root. Then later trying to `sudo mount -t ecryptfs` the correct `ecryptfs_fnek_sig` may not be picked up. You can verify that checking the output of the final mount command. Again `keyctl` command will help and running it with or without sudo will access different cache.
