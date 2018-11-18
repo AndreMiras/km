@@ -1,11 +1,8 @@
-# Ledger wallet
+# Ledger nano wallet
 
-How to configure Ledger hardware wallet on Linux.
-https://www.ledgerwallet.com/
+How to configure [Ledger hardware wallet](https://www.ledgerwallet.com/) on Linux.
 
 ## Configure udev
-
-
 File /etc/udev/rules.d/20-hw1.rules:
 ```
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="2581", ATTRS{idProduct}=="1b7c", MODE="0660", GROUP="plugdev"
@@ -23,13 +20,14 @@ Make sure you're part of the plugdev group.
 gpassword -a username plugdev
 ```
 
-You may want to reload udev rules, but that's may not be required.
+You may want to reload udev rules:
 ```
 udevadm control --reload-rules && udevadm trigger
 ```
 
-## Troubleshooting
+Find out more in ["Fix connection issues"](https://support.ledgerwallet.com/hc/en-us/articles/115005165269-Fix-connection-issues) documentation.
 
+## Troubleshooting
 Make sure browser support is disabled in the Ledger nano if you try to use it through the browser extension.
 Verify udev rules were applied properly by checking device permission. First check your device Bus and ID with `lsusb`,
 then check its permissions:
