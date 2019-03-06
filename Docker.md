@@ -59,3 +59,8 @@ Update `/etc/docker/daemon.json` with a configuration that doesn't conflict e.g.
 }
 ```
 More info here <https://success.docker.com/article/how-do-i-configure-the-default-bridge-docker0-network-for-docker-engine-to-a-different-subnet>.
+
+# Docker-compose
+
+## COPY & VOLUME
+When `volumes` are specified in the docker-compose file, they will mount the volume into the assigned directory. It could lead to missunderstandings with the Docker file `COPY` command.
