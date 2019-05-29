@@ -1,6 +1,7 @@
 # NFC Clone
 
 This is a "how to" NFC tags cloning using nfc-tools.
+Docker image: https://github.com/AndreMiras/dockerfiles/tree/master/nfc-tools
 
 ## Dump the blank Chinese card
 
