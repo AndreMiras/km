@@ -12,3 +12,8 @@
 ```
 :w !bash
 ```
+
+## Open link to browser
+```
+gx
+```
