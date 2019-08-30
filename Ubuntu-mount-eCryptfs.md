@@ -11,7 +11,7 @@
     Inserted auth tok with sig [cccccccccccccccc] into the user session keyring
 
     sudo mount -t ecryptfs /media/<disk>/home/.ecryptfs/<user>/.Private/ /mnt/
-    Passphrase:
+    Passphrase: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     Select cipher:
      1) aes: blocksize = 16; min keysize = 16; max keysize = 32
      2) blowfish: blocksize = 8; min keysize = 16; max keysize = 56
@@ -27,7 +27,7 @@
     Selection [16]: 1
     Enable plaintext passthrough (y/n) [n]: n
     Enable filename encryption (y/n) [n]: y
-    Filename Encryption Key (FNEK) Signature: cccccccccccccccc
+    Filename Encryption Key (FNEK) Signature [bbbbbbbbbbbbbbbb]: cccccccccccccccc
     Attempting to mount with the following options:
       ecryptfs_unlink_sigs
       ecryptfs_fnek_sig=cccccccccccccccc
