@@ -1,6 +1,7 @@
-# Arch install notes on Dell XPS 13 9360
+# Arch install notes on Dell XPS 13 9360 & 7390
 
 <https://wiki.archlinux.org/index.php/Installation_guide>
+<https://wiki.archlinux.org/index.php/Install_Arch_Linux_from_existing_Linux>
 
 ## TODO
 Install the custom wifi firmware?
@@ -8,7 +9,7 @@ Install the custom wifi firmware?
 
 ## Misc
 ```
-arch-chroot /mnt
+/tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
 ```
 
 ## Graphics
@@ -19,7 +20,10 @@ pacman -S mesa
 
 ## Desktop Environment
 ```sh
-pacman -S plasma-desktop sddm
+pacman -S \
+    plasma-desktop \
+    plasma-nm \
+    sddm
 systemctl enable sddm
 ```
 
@@ -37,7 +41,11 @@ pacman -S xf86-input-libinput xorg-xinput
 
 ## Network
 ```sh
-pacmac -S networkmanager
+pacman -S \
+    core/dhcpcd \
+    core/inetutils \
+    extra/networkmanager \
+    core/wpa_supplicant
 sytemctl enable NetworkManager
 ```
 
@@ -82,6 +90,7 @@ yay -S \
 ```
 
 ## Tweaks
+<https://wiki.archlinux.org/index.php/Acpid>
 ```sh
 pacman -S acpid
 systemctl enable acpid
