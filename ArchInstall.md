@@ -76,7 +76,7 @@ But still let's install grub on the Arch:
 pacman -S grub
 ```
 
-## optional packages
+## Additional packages
 ```sh
 pacman -S \
     keepass \
@@ -89,9 +89,10 @@ yay -S \
     community/vim-ultisnips
 ```
 
-## Tweaks
+## Power management
 <https://wiki.archlinux.org/index.php/Acpid>
 ```sh
-pacman -S acpid
+pacman -S acpid powerdevil
 systemctl enable acpid
+gpasswd -a andre video
 ```
