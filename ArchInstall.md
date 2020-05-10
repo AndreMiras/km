@@ -33,6 +33,21 @@ pacman -S pulseaudio plasma-pa
 pulseaudio --start
 ```
 
+## Bluetooth
+```
+sudo pacman -S \
+    bluedevil \
+    pulseaudio-bluetooth
+```
+Restart pulseaudio:
+```sh
+pulseaudio -k
+```
+Check the logs while connecting to the device:
+```
+sudo journalctl -f /usr/lib/bluetooth/bluetoothd
+```
+
 ## Touchpad
 https://wiki.archlinux.org/index.php/Libinput
 ```sh
