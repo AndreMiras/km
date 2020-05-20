@@ -111,3 +111,9 @@ pacman -S acpid powerdevil
 systemctl enable acpid
 gpasswd -a andre video
 ```
+
+## Fonts
+<https://wiki.archlinux.org/index.php/Fonts#Emoji_and_symbols>
+```sh
+pacman -S noto-fonts-emoji
+```
