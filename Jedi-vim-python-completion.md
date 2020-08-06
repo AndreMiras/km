@@ -4,6 +4,7 @@ Vim can handle advanced Python code completion and other neat features through [
 
 ## Install
 
+### Ubuntu Bionic 18.04
 Ubuntu Bionic 18.04 provides the [vim-python-jedi](https://packages.ubuntu.com/bionic/vim-python-jedi) for it:
 ```sh
 sudo apt install vim-python-jedi
@@ -13,6 +14,12 @@ which is not in the default runtimepath of `vim 2:8.0.1453-1ubuntu1`.
 Therefore we need to update the `runtimepath` accordingly, in `~/.vimrc` using the following:
 ```
 set runtimepath+=/usr/share/vim/addons
+```
+
+### ArchLinux
+Available on the official repositories via [vim-jedi](https://www.archlinux.org/packages/community/any/vim-jedi/).
+```sh
+sudo pacman -S vim-jedi
 ```
 
 ## Useful commands
