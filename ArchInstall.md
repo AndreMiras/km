@@ -104,12 +104,23 @@ yay -S \
     community/vim-ultisnips
 ```
 
+## Grub
+```sh
+pacman -S grub efibootmgr
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## User
+```sh
+useradd -m -s /bin/bash andre
+```
+
 ## Power management
 <https://wiki.archlinux.org/index.php/Acpid>
 ```sh
 pacman -S acpid powerdevil
 systemctl enable acpid
-gpasswd -a andre video
+gpasswd -a andre wheel video
 ```
 
 ## Fonts
