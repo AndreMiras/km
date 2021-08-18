@@ -29,7 +29,7 @@ Find out more in ["Fix connection issues"](https://support.ledgerwallet.com/hc/e
 
 ## Troubleshooting
 Make sure browser support is disabled in the Ledger nano if you try to use it through the browser extension.
-Verify udev rules were applied properly by checking device permission. First check your device Bus and ID with `lsusb`,
+Verify udev rules were applied properly by checking device permission. First check your device Bus and ID with `lsusb` (usbutils),
 then check its permissions:
 ```
 ls -l /dev/bus/usb/<bus>/<id>
