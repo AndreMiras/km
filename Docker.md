@@ -22,6 +22,11 @@ awk must use a single quote (this filters all image IDs).
 docker rmi $(docker images -q)
 ```
 
+### 4. Prune unused objects
+```sh
+docker system prune -a
+```
+
 ## Conflicting IP/netmask
 If the `docker0` interface is conflicting with one of the network interface e.g. `wlp58s0`:
 ```
