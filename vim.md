@@ -17,3 +17,8 @@
 ```
 gx
 ```
+
+## Terminal color escape codes
+```
+:term cat /path/to/file
+```
