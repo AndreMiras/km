@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  tinyproxy:
+    image: vimagick/tinyproxy
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./tinyproxy.conf:/etc/tinyproxy/tinyproxy.conf
+    restart: unless-stopped
