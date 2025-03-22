@@ -4,10 +4,12 @@
 <https://wiki.archlinux.org/index.php/Install_Arch_Linux_from_existing_Linux>
 
 ## TODO
+
 Install the custom wifi firmware?
 <https://wiki.archlinux.org/index.php/Dell_XPS_13_(9360)#Wireless>
 
 ## Misc
+
 ```
 /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
 ```
@@ -19,6 +21,7 @@ pacman -S mesa
 ```
 
 ## Desktop Environment
+
 ```sh
 pacman -S \
     plasma-desktop \
@@ -28,33 +31,42 @@ systemctl enable sddm
 ```
 
 ## Sound system
+
 ```sh
 pacman -S pulseaudio plasma-pa
 pulseaudio --start
 ```
 
 ## Bluetooth
+
 ```
 sudo pacman -S \
     bluedevil \
     pulseaudio-bluetooth
 ```
+
 Restart pulseaudio:
+
 ```sh
 pulseaudio -k
 ```
+
 Check the logs while connecting to the device:
+
 ```
 sudo journalctl -f /usr/lib/bluetooth/bluetoothd
 ```
 
 ## Touchpad
+
 https://wiki.archlinux.org/index.php/Libinput
+
 ```sh
 pacman -S xf86-input-libinput xorg-xinput
 ```
 
 ## Network
+
 ```sh
 pacman -S \
     core/dhcpcd \
@@ -65,7 +77,9 @@ sytemctl enable NetworkManager
 ```
 
 ## Grub
+
 Using the Gentoo one for now:
+
 ```
 [andre:/tmp] $ sudo grub-mkconfig -o /boot/grub/grub.cfg
 Password: 
@@ -87,11 +101,13 @@ done
 ```
 
 But still let's install grub on the Arch:
+
 ```sh
 pacman -S grub
 ```
 
 ## Additional packages
+
 ```sh
 pacman -S \
     keepass \
@@ -105,18 +121,22 @@ yay -S \
 ```
 
 ## Grub
+
 ```sh
 pacman -S grub efibootmgr
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## User
+
 ```sh
 useradd -m -s /bin/bash andre
 ```
 
 ## Power management
+
 <https://wiki.archlinux.org/index.php/Acpid>
+
 ```sh
 pacman -S acpid powerdevil
 systemctl enable acpid
@@ -124,7 +144,9 @@ gpasswd -a andre wheel video
 ```
 
 ## Fonts
+
 <https://wiki.archlinux.org/index.php/Fonts#Emoji_and_symbols>
+
 ```sh
 pacman -S noto-fonts-emoji
 ```

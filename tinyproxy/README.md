@@ -1,7 +1,7 @@
 # Tinyproxy
 
-Setup a HTTP proxy using docker compose.
-Adjust config as needed by editing `tinyproxy.conf`.
+Setup a HTTP proxy using docker compose. Adjust config as needed by editing
+`tinyproxy.conf`.
 
 ```sh
 docker compose up

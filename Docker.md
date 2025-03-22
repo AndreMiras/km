@@ -3,14 +3,16 @@
 ## Remove docker containers
 
 ### 1. Delete all containers
+
 ```sh
 docker rm $(docker ps -a -q)
 ```
 
-* -q prints only the container IDs
-* -a prints all containers
+- -q prints only the container IDs
+- -a prints all containers
 
 ### 2. Delete all untagged images
+
 ```sh
 docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 ```
@@ -18,17 +20,22 @@ docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 awk must use a single quote (this filters all image IDs).
 
 ### 3. Delete all images
+
 ```sh
 docker rmi $(docker images -q)
 ```
 
 ### 4. Prune unused objects
+
 ```sh
 docker system prune -a
 ```
 
 ## Conflicting IP/netmask
-If the `docker0` interface is conflicting with one of the network interface e.g. `wlp58s0`:
+
+If the `docker0` interface is conflicting with one of the network interface e.g.
+`wlp58s0`:
+
 ```
 docker0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
@@ -57,10 +64,15 @@ wlp58s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1460
         TX packets 6834308  bytes 1055118769 (1.0 GB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
-Update `/etc/docker/daemon.json` with a configuration that doesn't conflict e.g.:
+
+Update `/etc/docker/daemon.json` with a configuration that doesn't conflict
+e.g.:
+
 ```json
 {
   "bip": "172.26.0.1/16"
 }
 ```
-More info here <https://success.docker.com/article/how-do-i-configure-the-default-bridge-docker0-network-for-docker-engine-to-a-different-subnet>.
+
+More info here
+<https://success.docker.com/article/how-do-i-configure-the-default-bridge-docker0-network-for-docker-engine-to-a-different-subnet>.

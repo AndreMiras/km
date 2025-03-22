@@ -3,6 +3,7 @@
 Getting started guide with the Tikitag ACS ACR 38U-CCID reader on Gentoo Linux.
 
 ## Install
+
 Install dependencies.
 
     emerge sys-apps/pcsc-lite sys-apps/pcsc-tools app-crypt/ccid dev-libs/libnfc
@@ -31,6 +32,7 @@ ISO/IEC 14443A (106 kbps) target:
 ```
 
 pcsc_scan:
+
 ```
 $ pcsc_scan
 PC/SC device scanner
@@ -64,14 +66,17 @@ Possibly identified card (using /usr/share/pcsc/smartcard_list.txt):
 ```
 
 ## Play
+
 Play with RFIDIOt.
 
 Install dependencies.
+
 ```
 pip install pycrypto pyscard rfidiot
 ```
 
 Play:
+
 ```
 $ rfidiot-cli.py IDENTIFY
 

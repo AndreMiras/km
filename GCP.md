@@ -20,8 +20,9 @@ CLOUDSDK_PYTHON=python3.11 gsutil du -sh gs://mev-eth-usdc-arbitrage-bot-log-exp
 
 ## Specify Python version
 
-When the default system Python version is incompatible it's possible to specify another version using the `CLOUDSDK_PYTHON` environment variable.
-For instance the following error:
+When the default system Python version is incompatible it's possible to specify
+another version using the `CLOUDSDK_PYTHON` environment variable. For instance
+the following error:
 
 ```
 gsutil version

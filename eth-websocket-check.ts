@@ -20,7 +20,7 @@ webSocketProvider.on("connect", () => {
 const subscribeToNewBlocks = async () => {
   const newBlockHeadersCallback = (
     error: Error,
-    blockHeader: BlockHeaderOutput
+    blockHeader: BlockHeaderOutput,
   ) => {
     if (!error) {
       console.log(blockHeader);
@@ -31,7 +31,7 @@ const subscribeToNewBlocks = async () => {
   try {
     const subscription = await web3.eth.subscribe(
       "newBlockHeaders",
-      newBlockHeadersCallback
+      newBlockHeadersCallback,
     );
     subscription.on("connected", (subscriptionId: string) => {
       console.log(`Subscription ID: ${subscriptionId}`);
